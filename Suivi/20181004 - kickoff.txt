@@ -1,0 +1,42 @@
+Kick off 04/10/2018
+call avec marketing ( Amandine Vervin(chef proj marketing digital - interface IkI) - Amandine Jacquet(marketing digital et comm) )
+
+Contexte
+- Agence de comm livraison au plus vite sous format photoshop
+
+Expression du besoin et maquette en cours de finalisation (test utilisateur Courtier => plusieurs types différents) => mardi ou mercredi prochain
+types courtiers => assurances emprunteurs immo : 
+- en credit immo(methodo et outils specifique) 
+- en assurance (vendent de tt, pas les m outils) 
+- agent generaux (un peu de courtage, moins d'outils, moins expert en methodo)
+
+UX => pas besoin ux designer ? => pourrait accélerer la livraison
+
+priorisation de page ? livrable au fil de l'eau
+(proposition de prise en charge de modification mineure de créa en interne SIXMON => thibault ok)
+
+
+Formulaire dynamique par récupération des champs par API ????
+prévoir dynamique mais les datas de form sont en app.constants
+
+
+coopengo - prevoir une reunion ? attenre étude des échanges api avant => semaine du 15/10 (jeudi 18/10 max)
+première phase d'étue avec coopengo en cours (flux apis)
+
+
+Outils => microsoft teeams => filiassur voit pour créer un compte invité SIXMON
+docs coopengo fournies par filiassur
+cogApi dernier version 1.15 ? dispo sur le teams
+creation d'un user cog pour SIXMON par filiassur
+
+
+Env. de test :
+-env de recette à partager par filiassur
+-git coopengo et filiassur à partager par filiassur => api sur nodeJS peut etre surchargé (mise en place de route 'custom' qui sont prioritaire) => dev pris en charge par filiassur
+-heberg du front en cours de dev par SIXMON ?
+
+
+
+
+suivi projet
+1 call par semaine (physique si besoin) -> le vendredi 14h30

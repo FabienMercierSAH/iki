@@ -1,0 +1,7 @@
+.project-container {
+	display: block;
+	width: calc(100% - 300px);
+	height: calc(100% - 20px);
+	top: 0;
+	left: 0;
+}

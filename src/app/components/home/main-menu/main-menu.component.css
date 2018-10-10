@@ -1,0 +1,27 @@
+
+.main-menu-container {
+	display: flex;
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #888;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000; 
+	width: 100px;
+	height: 100px;
+}
+
+.active {
+	border: 3px solid #000; 
+	font-weight: bold;
+}

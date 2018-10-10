@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core'
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app',
+    templateUrl: 'app.component.html'
 })
-export class AppComponent {
-  title = 'iki';
+
+export class AppComponent implements OnInit, AfterViewInit {
+
+	public isUserLogged: boolean = false 
+
+	ngOnInit() {
+		this.isLogged()
+	}
+
+	ngAfterViewInit() {
+		setTimeout(() => {
+            this.isLogged()
+        });
+		
+	}
+
+	isLogged(): boolean {
+		return localStorage.getItem("currentUser") !== null
+	}
+
 }

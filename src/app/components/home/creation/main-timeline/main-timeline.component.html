@@ -1,0 +1,35 @@
+<div class = "main-timeline-container">
+
+	<span 
+		class = "main-time-item active"
+		[ngClass] = "{'active' : currentMainStep == 'project'}"
+		(click) = "GoToMainStep('/creation/project')"
+	>
+		1<BR>Projet
+	</span>
+
+	<span 
+		class = "main-time-item"
+		[ngClass] = "{'active' : currentMainStep == 'offer'}"
+		(click) = "GoToMainStep('/creation/offer')"
+	>
+		2<BR>Offre
+	</span>
+
+	<span 
+		class = "main-time-item"
+		[ngClass] = "{'active' : currentMainStep == 'subscription'}"
+		(click) = "GoToMainStep('/creation/subscription')"
+	>
+		3<BR>Souscription
+	</span>
+
+	<span 
+		class = "main-time-item"
+		[ngClass] = "{'active' : currentMainStep == 'upload'}"
+		(click) = "GoToMainStep('/creation/upload')"
+	>
+		4<BR>Upload
+	</span>
+
+</div>

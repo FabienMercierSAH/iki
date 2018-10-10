@@ -1,0 +1,142 @@
+<div class = "login-page">
+    <div class = "login-container">
+
+        <div class = "visual-caontainer">
+            visuel
+        </div>
+
+        <div class = "myspace-caontainer">
+            Mon espace courtier IKI
+        </div>
+
+        <form 
+            *ngIf = "!forgetForm"
+            [formGroup] = "loginForm" 
+            (ngSubmit) = "onSubmit()">
+            
+            <div 
+                class = "form-item"
+                *ngFor = "let fControl of formlogin.Controls">
+
+                <label [attr.for] = "f[fControl.Name]">{{ fControl.Label }}</label>
+
+                <input 
+                    [type] = "fControl.Type" 
+                    [name] = "fControl.Name"
+                    [formControlName] = "fControl.Name" 
+                    [ngClass] = "{ 'is-invalid': submitted && f[fControl.Name].errors }" />
+
+                <div 
+                    *ngIf = "submitted && f[fControl.Name].errors"
+                    class = "form-error">
+                    <div *ngIf = "f[fControl.Name].errors.required">
+                        {{ fControl.Errors.required }}
+                    </div>
+                    <div *ngIf = "f[fControl.Name].errors.pattern">
+                        {{ fControl.Errors.pattern }}
+                    </div>
+                </div>
+
+            </div>
+
+            <div 
+                *ngIf="error && error.type=='login'"
+                class = "form-error">
+                {{error.message}}
+            </div>
+
+             <div 
+                *ngIf="error && error.type=='password'"
+                class = "form-error">
+                {{error.message}}
+                <a (click) = "OpenPasswordFogotten()">Vous l'avez oublié ?</a>
+            </div>
+
+
+            <div class = "form-item">
+                <button class = "btn login-btn" [disabled] = "loading">
+                    <span *ngIf="!loading">
+                        Connexion
+                    </span>
+                               
+                    <img 
+                        *ngIf="loading"
+                        class = "loading-small" 
+                        src="./assets/loading.gif" />
+                </button>                
+            </div>
+
+        </form>
+
+        <form 
+            *ngIf = "forgetForm"
+            [formGroup] = "forgottenForm" 
+            (ngSubmit) = "onSubmitforgottenForm()">
+            
+            <p>Veuillez renseigner votre adresse e-mail professionnelle pour modifier votre mot de passe.</p>
+
+            <div class = "form-item">
+                <label for = "emailForForgottenPassword">Mon adresse e-mail professionnelle </label>
+
+                <input type = "text" 
+                    formControlName = "emailForForgottenPassword" 
+                    [ngClass] = "{ 'is-invalid': submitted && f.emailForForgottenPassword.errors }" />
+
+                <div 
+                    *ngIf = "submitted && f.emailForForgottenPassword.errors"
+                    class = "form-error">
+                    <div *ngIf = "f.emailForForgottenPassword.errors.required">
+                        L'e-mail est requis
+                    </div>
+                </div>
+
+                <div 
+                    *ngIf="error && error.type=='email'"
+                    class = "form-error">
+                    {{error.message}}
+                </div>
+            </div>
+            
+
+            <div class = "form-item btn-ctn">
+                <button 
+                    *ngIf = "!mailSent"
+                    class = "btn login-btn" 
+                    [disabled] = "loadingForgottenForm">
+
+                    <span *ngIf="!loadingForgottenForm">
+                        Récuperer
+                    </span>
+                               
+                    <img 
+                        *ngIf="loadingForgottenForm" 
+                        class = "loading-small" 
+                        src="./assets/loading.gif" />
+                </button>     
+
+                <button 
+                    *ngIf = "!mailSent"
+                    (click) = "CancelForgottenPassword()"
+                    class = "btn login-btn" 
+                    [disabled] = "loadingForgottenForm">
+
+                    <span>
+                        Abandonner
+                    </span>
+                </button>   
+
+                <p
+                    *ngIf = "mailSent"
+                    class = "email-sent-success">
+                    Nous venons de vous envoyer le mail de réinitialisation.
+                    <button 
+                        (click) = "backToLogin()"
+                        class = "btn email-sent-btn">
+                        OK
+                    </button>
+                </p>             
+            </div>
+
+        </form>
+
+</div>

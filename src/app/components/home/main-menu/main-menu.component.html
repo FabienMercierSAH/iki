@@ -1,0 +1,31 @@
+<div class = "main-menu-container">
+
+	<span>
+		LOGO
+	</span>
+
+	<span class = "menu-item"
+		[ngClass] = "{'active' : currentView == 'creation' || currentView == '/creation'  || currentView == '/'}"
+		(click) = "GoToView('creation')">
+		Création
+	</span>
+
+	<span class = "menu-item"
+		[ngClass] = "{'active' : currentView == 'contracts' || currentView == '/contracts'}"
+		(click) = "GoToView('contracts')">
+		Mes contrats
+	</span>
+
+	<span class = "menu-item"
+		[ngClass] = "{'active' : currentView == 'customers' || currentView == '/customers'}"
+		(click) = "GoToView('customers')">
+		Mes clients
+	</span>
+
+	<span class = "menu-item"
+		[ngClass] = "{'active' : currentView == 'activities' || currentView == '/activities'}"
+		(click) = "GoToView('activities')">
+		Mes activités
+	</span>
+
+</div>

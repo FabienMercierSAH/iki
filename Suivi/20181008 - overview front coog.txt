@@ -1,0 +1,40 @@
+20181008 - overview front coog
+consultant copengo
+
+party = tiers (personne physique ou moral)
+
+broker = courtier 
+	distribution.network = courtage (admin) + 3 niveaux => code maitre(reseau national) / sous code(agence) / sous sous code(couriter)
+	
+cotation = devis temporaire (simulation) que côté front
+
+contract
+	quote = devis soumis persisté back status = quote
+	contract = status = active
+
+subscription
+
+covered = assuré
+
+
+pas d'api pour reset password
+pas d'api pour password changing
+
+
+Cotation temporaire n'est pas persisté en base (back)
+Persistance cotation temporaire et document génrére cotation temporaire ??? redis, bdd, stockage fichier
+cotation temp => génération d'un numero unique
+
+
+
+page
+
+1 - front coog => web/cotation pavé Données complémentaires
+5 - pret 2 et + => préremplir orga preteur et bloqué modif
+12 - garanties pret 2 et + => prérempli non modif
+14 - précier le commissionnement
+15 - les données tableaux sont des moyennes et cumul de ts les prêts
+
+
+
+A préciser fonctionnmeent questionnaire médicale, stockage des réponses ? ou juste resultat final ?

@@ -1,0 +1,35 @@
+<div class = "sub-timeline-container">
+
+	<span 
+		[ngClass] = "{'active' : currentSubStep == 'prerequisites'}"
+		(click) = "GoToSubStep('/creation/project/prerequisites')">
+		Infos préalables
+		<br/>
+		Etape 1/4
+	</span>
+
+	<span
+		[ngClass] = "{'active' : currentSubStep == 'loan'}"
+		(click) = "GoToSubStep('/creation/project/loan')">
+		Prêt
+		<br/>
+		Etape 2/4
+	</span>
+
+	<span
+		[ngClass] = "{'active' : currentSubStep == 'insured'}"
+		(click) = "GoToSubStep('/creation/project/insured')">
+		Assuré
+		<br/>
+		Etape 3/4
+	</span>
+
+	<span
+		[ngClass] = "{'active' : currentSubStep == 'guarantees'}"
+		(click) = "GoToSubStep('/creation/project/guarantees')">
+		Garanties
+		<br/>
+		Etape 4/4
+	</span>
+
+</div>

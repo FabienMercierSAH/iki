@@ -1,0 +1,33 @@
+.profil-ctn {
+	display: flex;
+	width: 300px;
+	
+	background-color: #aaa;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.user-avatar {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.user-infos-ctn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.user-infos {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.logout {
+	font-size: 0.9em;
+	font-style: italic;
+	cursor: pointer;
+}
