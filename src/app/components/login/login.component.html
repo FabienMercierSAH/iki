@@ -18,24 +18,12 @@
                 class = "form-item"
                 *ngFor = "let fControl of formlogin.Controls">
 
-                <label [attr.for] = "f[fControl.Name]">{{ fControl.Label }}</label>
-
-                <input 
-                    [type] = "fControl.Type" 
-                    [name] = "fControl.Name"
-                    [formControlName] = "fControl.Name" 
-                    [ngClass] = "{ 'is-invalid': submitted && f[fControl.Name].errors }" />
-
-                <div 
-                    *ngIf = "submitted && f[fControl.Name].errors"
-                    class = "form-error">
-                    <div *ngIf = "f[fControl.Name].errors.required">
-                        {{ fControl.Errors.required }}
-                    </div>
-                    <div *ngIf = "f[fControl.Name].errors.pattern">
-                        {{ fControl.Errors.pattern }}
-                    </div>
-                </div>
+                <app-form-input
+                    [item] = "fControl"
+                    [form] = "loginForm"
+                    [isSubmit] = "submitted"
+                    [formControlName] = "fControl.Name" >                    
+                </app-form-input>
 
             </div>
 

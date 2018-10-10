@@ -10,18 +10,10 @@
 
 	<span 
 		class = "main-time-item"
-		[ngClass] = "{'active' : currentMainStep == 'offer'}"
-		(click) = "GoToMainStep('/creation/offer')"
-	>
-		2<BR>Offre
-	</span>
-
-	<span 
-		class = "main-time-item"
 		[ngClass] = "{'active' : currentMainStep == 'subscription'}"
 		(click) = "GoToMainStep('/creation/subscription')"
 	>
-		3<BR>Souscription
+		2<BR>Souscription
 	</span>
 
 	<span 
@@ -29,7 +21,7 @@
 		[ngClass] = "{'active' : currentMainStep == 'upload'}"
 		(click) = "GoToMainStep('/creation/upload')"
 	>
-		4<BR>Upload
+		3<BR>Upload
 	</span>
 
 </div>

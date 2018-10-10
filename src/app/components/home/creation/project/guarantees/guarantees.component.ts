@@ -18,7 +18,7 @@ export class GuaranteesComponent implements OnInit {
 	ngOnInit() { }
 
   	GoToNextStep() {
-		this._creation.EnabledMainStep("offer")
+		this._creation.EnabledMainStep("subscription")
 	}
 
 	Cancel() {

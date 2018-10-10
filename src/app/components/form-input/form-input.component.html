@@ -1,0 +1,25 @@
+<label 
+	class = "form-input-label" 
+	[attr.for] = "item.Name">
+	{{ item.Label }}
+</label>
+
+<input 
+	class = "form-input-component"
+    [type] = "item.Type" 
+    [name] = "item.Name"
+    [ngClass] = "{ 'is-invalid': isSubmit && form.controls[item.Name].errors }"
+
+    (input)="onChange($event)"
+/>
+
+<div 
+    *ngIf = "isSubmit && form.controls[item.Name].errors"
+    class = "form-error">
+    <div *ngIf = "form.controls[item.Name].errors.required">
+        {{ item.Errors.required }}
+    </div>
+    <div *ngIf = "form.controls[item.Name].errors.pattern">
+        {{ item.Errors.pattern }}
+    </div>
+</div>

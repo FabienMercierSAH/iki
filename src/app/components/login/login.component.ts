@@ -42,8 +42,7 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private authenticationService: AuthenticationService,
         private _user: UserService,
-        private _utilities: UtilitiesService,
-        public formbuilder: FormBuilder
+        private _utilities: UtilitiesService
     ) {
         if(this.authenticationService.isLogged() !== null && this.authenticationService.isLogged() !== undefined) {
             this.router.navigate(["/"])                            
@@ -66,7 +65,7 @@ export class LoginComponent implements OnInit {
             .forEach( 
                 item => {
 
-                    this.loginForm.addControl(item.Name, this.formbuilder.control([]))
+                    this.loginForm.addControl(item.Name, this.formBuilder.control([]))
 
                     let valids: Array<any> = []
                     item.Validators
@@ -77,7 +76,7 @@ export class LoginComponent implements OnInit {
                         )
                     this.loginForm.controls[item.Name].setValidators(Validators.compose(valids))
 
-                    this.loginForm.controls[item.Name].setValue("")
+                    this.loginForm.controls[item.Name].setValue(item.Default)
 
                 }
             )
@@ -87,7 +86,7 @@ export class LoginComponent implements OnInit {
             .forEach( 
                 item => {
 
-                    this.forgottenForm.addControl(item.Name, this.formbuilder.control([]))
+                    this.forgottenForm.addControl(item.Name, this.formBuilder.control([]))
 
                     let valids: Array<any> = []
                     item.Validators
@@ -98,7 +97,7 @@ export class LoginComponent implements OnInit {
                         )
                     this.forgottenForm.controls[item.Name].setValidators(Validators.compose(valids))
 
-                    this.forgottenForm.controls[item.Name].setValue("")
+                    this.forgottenForm.controls[item.Name].setValue(item.Default)
 
                 }
             )

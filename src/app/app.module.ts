@@ -24,13 +24,13 @@ import { HomeComponent } from './components/home/home.component'
             import { LoanComponent } from './components/home/creation/project/loan/loan.component'
             import { InsuredComponent } from './components/home/creation/project/insured/insured.component'
             import { GuaranteesComponent } from './components/home/creation/project/guarantees/guarantees.component'
-        import { OfferComponent } from './components/home/creation/offer/offer.component'
         import { SubscriptionComponent } from './components/home/creation/subscription/subscription.component'
         import { UploadComponent } from './components/home/creation/upload/upload.component'
     import { ContractsComponent } from './components/home/contracts/contracts.component'
     import { CustomersComponent } from './components/home/customers/customers.component'
-    import { ActivitiesComponent } from './components/home/activities/activities.component';
+    import { ActivitiesComponent } from './components/home/activities/activities.component'
 import { UserProfilComponent } from './components/home/user-profil/user-profil.component'
+import { FormInputComponent } from './components/form-input/form-input.component'
 
 @NgModule({
     imports: [
@@ -48,7 +48,6 @@ import { UserProfilComponent } from './components/home/user-profil/user-profil.c
         MainHeaderComponent,
         MainMenuComponent,
         ProjectComponent,
-        OfferComponent,
         SubscriptionComponent,
         UploadComponent,
         CreationComponent,
@@ -60,7 +59,8 @@ import { UserProfilComponent } from './components/home/user-profil/user-profil.c
         InsuredComponent,
         GuaranteesComponent,
         PasswordResetComponent,
-        UserProfilComponent
+        UserProfilComponent,
+        FormInputComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true },

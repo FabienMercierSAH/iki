@@ -1,0 +1,25 @@
+
+
+.form-input-label {
+	float: left
+}
+
+.form-input-component {
+	width: 100%;
+}
+
+.form-error {
+	background-color: #dc3545;
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	text-align: left;
+	margin-top: 2px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.form-error a {
+	float: right;
+	text-decoration: underline;
+}

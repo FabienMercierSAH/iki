@@ -9,7 +9,6 @@ import { ContractsComponent } from './components/home/contracts/contracts.compon
 import { CustomersComponent } from './components/home/customers/customers.component'
 import { ActivitiesComponent } from './components/home/activities/activities.component'
 import { ProjectComponent } from './components/home/creation/project/project.component'
-import { OfferComponent } from './components/home/creation/offer/offer.component'
 import { SubscriptionComponent } from './components/home/creation/subscription/subscription.component'
 import { UploadComponent } from './components/home/creation/upload/upload.component'
 import { PrerequisitesComponent } from './components/home/creation/project/prerequisites/prerequisites.component'
@@ -41,10 +40,21 @@ const appRoutes: Routes = [
 						    { path: 'prerequisites', component: PrerequisitesComponent }, 
 						    { path: 'loan', component: LoanComponent },
 						    { path: 'insured', component: InsuredComponent },
-						    { path: 'guarantees', component: GuaranteesComponent }
+						    { path: 'guarantees', component: GuaranteesComponent },
+
+							{ path: 'type', component: LoanComponent },
+							{ path: 'loanspecifications', component: LoanComponent },
+							{ path: 'borrowers/personnalinformations', component: LoanComponent },
+							{ path: 'borrowers/generalinformations', component: LoanComponent },
+							{ path: 'borrowers/otherinformations', component: LoanComponent },
+							{ path: 'guarantees', component: LoanComponent },
+							{ path: 'commissions', component: LoanComponent },
+							{ path: 'subscriberselection', component: LoanComponent },
+							{ path: 'bankdetails', component: LoanComponent },
+							{ path: 'bankingingormations', component: LoanComponent },
+
 				    	]  
 				    }, 
-				    { path: 'offer', component: OfferComponent },
 				    { path: 'subscription', component: SubscriptionComponent },
 				    { path: 'upload', component: UploadComponent }
 		    	] 
